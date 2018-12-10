@@ -1,4 +1,12 @@
-# README
+# TEST GURU
+
+В проекте предполагается оперирование сущностями:
+* пользователь
+* администратор
+* тест
+* вопрос
+* ответ
+* результат опроса
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
