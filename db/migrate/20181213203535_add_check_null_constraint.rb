@@ -11,6 +11,5 @@ class AddCheckNullConstraint < ActiveRecord::Migration[5.2]
     change_column_null(:tests, :level, false)
 
     change_column_null(:users, :name, false)
-    change_column_null(:users, :admin, false)
   end
 end
