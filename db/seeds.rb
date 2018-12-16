@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user =  User.create!(title: "Derp")
+user = User.create!(title: "Derp")
 
-backend = Category.create!(title: "Backend")
-frontend = Category.create!(title: "Frontend")
+backend, frontend = Category.create!(
+  [{ title: "Backend" }, { title: "Frontend" }]
+)
 
 ruby = Test.create!(title: "Ruby", level: 1, category_id: backend.id)
 python = Test.create!(title: "Python", level: 2, category_id: backend.id)
