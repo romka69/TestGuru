@@ -6,16 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(title: "Derp")
+derp, bob = User.create!(
+  [{ title: "Derp" }, { title: "Bob" }]
+)
 
 backend, frontend = Category.create!(
   [{ title: "Backend" }, { title: "Frontend" }]
 )
 
-ruby = Test.create!(title: "Ruby", level: 1, category_id: backend.id)
-python = Test.create!(title: "Python", level: 2, category_id: backend.id)
-html = Test.create!(title: "HTML", level: 0, category_id: frontend.id)
-css = Test.create!(title: "CSS", level: 0, category_id: frontend.id)
+ruby = Test.create!(title: "Ruby", level: 1, category_id: backend.id, author_id: bob.id)
+python = Test.create!(title: "Python", level: 2, category_id: backend.id, author_id: bob.id)
+html = Test.create!(title: "HTML", level: 0, category_id: frontend.id, author_id: bob.id)
+css = Test.create!(title: "CSS", level: 0, category_id: frontend.id, author_id: bob.id)
 
 questions = Question.create!(
   [{ body: "Which command can download the library?", test_id: ruby.id },
@@ -36,6 +38,6 @@ answers = Answer.create!(
 )
 
 results = Result.create!(
-  [{ user: user, test: ruby },
-   { user: user, test: html }]
+  [{ user: derp, test: ruby },
+   { user: derp, test: html }]
 )
