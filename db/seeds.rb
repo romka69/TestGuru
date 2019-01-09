@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 derp, bob = User.create!(
-  [{ title: "Derp", email: "derp@mail.com" }, { title: "Bob", email: "bob@mail.com" }]
+  [{ name: "Derp", email: "derp@mail.com" }, { name: "Bob", email: "bob@mail.com" }]
 )
 
 backend, frontend = Category.create!(
