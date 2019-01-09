@@ -11,7 +11,6 @@ class QuestionsController < ApplicationController
   end
 
   def new
-
   end
 
   def show
