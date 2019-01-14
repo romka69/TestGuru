@@ -4,6 +4,10 @@
   <%= @test_passage.current_question.body %>
 </b>
 
+<p>
+  This is '<%= test_cur_question(@test_passage)%>' question from '<%= test_all_questions(@test_passage)%>' questions
+</p>
+
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>
