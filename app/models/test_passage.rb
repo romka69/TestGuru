@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_question, on: :create
+  before_validation :before_validation_set_question
 
   def completed?
     current_question.nil?
