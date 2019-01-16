@@ -5,7 +5,7 @@
 </b>
 
 <p>
-  This is '<%= test_cur_question(@test_passage)%>' question from '<%= test_all_questions(@test_passage)%>' questions
+  This is '<%= test_current_question(@test_passage)%>' question from '<%= test_all_questions(@test_passage)%>' questions
 </p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>

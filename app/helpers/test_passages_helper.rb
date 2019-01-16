@@ -1,6 +1,6 @@
 module TestPassagesHelper
 
-  def test_cur_question(test_passage)
+  def test_current_question(test_passage)
     "#{test_passage.current_question_index}"
   end
 
