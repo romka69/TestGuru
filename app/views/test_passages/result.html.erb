@@ -1,9 +1,9 @@
 <h1>The <%= @test_passage.test.title %> test was completed!</h1>
 
 <% if @test_passage.test_success_done? %>
-  <p style="color: green">
+  <p class="test_success">
 <% else %>
-  <p style="color: red">
+  <p class="test_fail">
 <% end %>
 
 Test <%= test_done_message(@test_passage) %> with <%= @test_passage.success_progress.to_i %>%
