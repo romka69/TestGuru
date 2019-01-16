@@ -1,0 +1,15 @@
+<h1>The <%= @test_passage.test.title %> test was completed!</h1>
+
+<% if @test_passage.test_success_done? %>
+  <p class="test_success">
+<% else %>
+  <p class="test_fail">
+<% end %>
+
+Test <%= test_done_message(@test_passage) %> with <%= @test_passage.success_progress.to_i %>%
+
+</p>
+
+
+
+<%= link_to 'To tests', tests_path %>

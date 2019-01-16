@@ -37,7 +37,7 @@ answers = Answer.create!(
    { body: "Incorrect answer to CSS", correct: false, question_id: questions[3].id }]
 )
 
-results = Result.create!(
+results = TestPassage.create!(
   [{ user: derp, test: ruby },
    { user: derp, test: html }]
 )

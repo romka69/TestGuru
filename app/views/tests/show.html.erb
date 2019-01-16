@@ -12,18 +12,15 @@
   <strong>Questions:</strong>
 </p>
 
-<table>
-  <tr>
-    <th>№</th>
-    <th>Body</th>
-  </tr>
+<%= link_to 'New question', new_test_question_path(@test) %>
 
-  <%= render 'test_questions' %>
+<table>
+
+  <%= render @test.questions %>
 
 </table>
 
 <%= link_to 'Edit test', edit_test_path(@test) %> |
-<%= link_to 'New question', new_test_question_path(@test) %> |
 <%= link_to 'Delete test',
             test_path(@test),
             method: :delete,
