@@ -23,7 +23,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success_progress
-    (correct_questions.to_f / test.questions.count.to_f) * 100
+    (correct_questions.to_f / test.questions.count) * 100
   end
 
   def current_question_index
