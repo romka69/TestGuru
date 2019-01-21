@@ -8,10 +8,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <% if login_in? %>
+      <p class="nav user">Welcome, <b><%= current_user.email %></b> Guru</p>
+    <% end %>
+
     <%= yield %>
 
-  <%= render 'shared/footer' %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
