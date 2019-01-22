@@ -1,5 +1,3 @@
-require 'digest/sha1'
-
 class User < ApplicationRecord
 
   VALID_EMAIL = /\A\w+@\w+\.\w+\z/.freeze
