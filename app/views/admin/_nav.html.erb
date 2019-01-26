@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <div class="nav nav-admin">
+    <span class="nav-admin title"> TestGuru Admin Panel</span>
+
+    <div class="nav-admin user">
+      <b><%= current_user.full_name %></b> Guru |
+      <%= link_to 'Quit', destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+<% end %>
