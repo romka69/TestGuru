@@ -6,11 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def default_url_options
-    if I18n.default_locale == I18n.locale
-      {}
-    else
-      { lang: I18n.locale }
-    end
+    { lang: (I18n.locale if I18n.default_locale != I18n.locale) }
   end
 
   private
