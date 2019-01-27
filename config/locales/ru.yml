@@ -52,6 +52,7 @@ ru:
         title: "Название"
         level: "Уровень"
         questions: "Вопросы"
+        actions: "Действия"
         new_question: "Новый вопрос"
         edit: "Редактировать тест"
         delete: "Удалить тест"

@@ -1,28 +1,34 @@
-<p>
-  <strong><%= t('.title') %>:</strong>
-  <%= @test.title %>
-</p>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <p>
+      <strong><%= t('.title') %>:</strong>
+      <%= @test.title %>
+    </p>
+    <p>
+        <strong><%= t('.level') %>:</strong>
+        <%= @test.level %>
 
-<p>
-  <strong><%= t('.level') %>:</strong>
-  <%= @test.level %>
-</p>
+    <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'nav-link mt-3' %>
 
-<p>
-  <strong><%= t('.questions') %>:</strong>
-</p>
+    <table class="table table sm">
+      <thead>
+        <tr>
+          <th scope="col"><%= t('.questions') %></th>
+          <th colspan="4" scope="col" class="text-center"><%= t('.actions') %></th>
+        </tr>
+      </thead>
 
-<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+      <%= render partial: 'admin/questions/question', collection: @test.questions %>
 
-<table>
-
-  <%= render partial: 'admin/questions/question', collection: @test.questions %>
-
-</table>
-
-<%= link_to t('.edit'), edit_admin_test_path(@test) %> |
-<%= link_to t('.delete'),
-            admin_test_path(@test),
-            method: :delete,
-            data: { confirm: t('navigation.confirm') } %> |
-<%= link_to t('navigation.back'), admin_tests_path %>
+    </table>
+    <div class="row">
+    <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'nav-link' %>
+    <%= link_to t('.delete'),
+                admin_test_path(@test),
+                method: :delete,
+                data: { confirm: t('navigation.confirm') },
+                class: 'nav-link'%>
+    <%= link_to t('navigation.back'), admin_tests_path, class: 'nav-link' %>
+    </div>
+  </div>
+</div>

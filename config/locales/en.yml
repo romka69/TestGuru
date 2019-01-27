@@ -50,6 +50,7 @@ en:
         title: "Title"
         level: "Level"
         questions: "Questions"
+        actions: "Actions"
         new_question: "New question"
         edit: "Edit test"
         delete: "Delete test"
