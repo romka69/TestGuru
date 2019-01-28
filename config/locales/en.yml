@@ -76,3 +76,6 @@ en:
   navigation:
     back: "Back"
     confirm: "You are sure?"
+
+  gist:
+    description: "A question about %{title} from TestGuru"

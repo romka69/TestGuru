@@ -78,3 +78,6 @@ ru:
   navigation:
     back: "Назад"
     confirm: "Вы уверены?"
+
+  gist:
+    description: "Вопрос из теста %{title} от TestGuru"
