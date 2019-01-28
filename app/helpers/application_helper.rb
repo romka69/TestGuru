@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  FLASH_KEYS = { notice: 'alert-success', alert: 'alert-danger' }.freeze
+  FLASH_KEYS = { notice: 'alert-success', alert: 'alert-danger', login: 'alert-primary' }.freeze
 
   def current_year
     Time.current.year
