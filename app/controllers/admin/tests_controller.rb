@@ -37,7 +37,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy
 
-    redirect_to admin_tests_path, notice: t('.success')
+    redirect_to admin_tests_path, alert: t('.success')
   end
 
   private
