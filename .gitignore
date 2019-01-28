@@ -35,3 +35,5 @@
 \.idea/
 
 test/
+
+app/\.env
