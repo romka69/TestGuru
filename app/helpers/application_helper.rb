@@ -10,12 +10,8 @@ module ApplicationHelper
     "http://github.com/#{author}/#{repo}"
   end
 
-  def bootstrap_flash
-    message = ''
-    flash.each do |key, value|
-      message << content_tag(:p, value, class: "alert #{FLASH_KEYS[key.to_sym]}")
-    end
-    message.html_safe
+  def bootstrap_flash(key)
+    FLASH_KEYS[key.to_sym]
   end
 
 end
