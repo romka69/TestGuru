@@ -42,3 +42,8 @@ results = TestPassage.create!(
   [{ user: derp, test: ruby },
    { user: derp, test: html }]
 )
+
+gists = Gist.create!(
+  [{ user: derp, question: questions[0].id, url: "derp_url"},
+   { user: bob, question: questions[1].id, url: "bob_url"}]
+)
