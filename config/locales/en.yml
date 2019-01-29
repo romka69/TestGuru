@@ -40,6 +40,12 @@ en:
       start: "Start"
 
   admin:
+    gists:
+      index:
+        header: "List of Gists created by users"
+        question: "Question"
+        gist_url: "Gist URL"
+        user: "User"
     tests:
       index:
         header: "All tests"
@@ -48,6 +54,7 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        gists: "Gists users"
 
       show:
         title: "Title"
