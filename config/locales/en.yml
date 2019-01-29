@@ -4,6 +4,9 @@ en:
   test_passages:
     result:
       header: "The %{title} test was completed!"
+    gist:
+      success: "Gist saved!"
+      failure: "Gist not saved, error!"
 
   shared:
     errors:
