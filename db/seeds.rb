@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 derp, bob = User.create!(
-  [{ first_name: "Derp", last_name: "Bond", email: "derp@mail.com" },
-   { first_name: "Bob", last_name: "Farrell", email: "bob@mail.com" }]
+  [{ first_name: "Derp", last_name: "Bond", email: "derp@mail.com", encrypted_password: "qwerty" },
+   { first_name: "Bob", last_name: "Farrell", email: "bob@mail.com", encrypted_password: "qwerty" }]
 )
 
 backend, frontend = Category.create!(
@@ -44,6 +44,6 @@ results = TestPassage.create!(
 )
 
 gists = Gist.create!(
-  [{ user: derp, question: questions[0].id, url: "derp_url"},
-   { user: bob, question: questions[1].id, url: "bob_url"}]
+  [{ user: derp, question: questions[0], url: "derp_url"},
+   { user: bob, question: questions[1], url: "bob_url"}]
 )
