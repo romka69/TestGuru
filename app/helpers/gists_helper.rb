@@ -1,5 +1,5 @@
 module GistsHelper
-  def hash_from_url(url)
+  def gist_hash(url)
     url.split('/').last
   end
 end

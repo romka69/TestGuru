@@ -87,6 +87,6 @@ en:
     back: "Back"
     confirm: "You are sure?"
 
-  service:
+  services:
     gist:
       description: "A question about %{title} from TestGuru"

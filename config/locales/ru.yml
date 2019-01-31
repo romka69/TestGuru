@@ -89,6 +89,6 @@ ru:
     back: "Назад"
     confirm: "Вы уверены?"
 
-  service:
+  services:
     gist:
       description: "Вопрос из теста %{title} от TestGuru"
