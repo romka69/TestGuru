@@ -4,6 +4,9 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Gist не сохранен, ошибка!"
 
   shared:
     errors:
@@ -39,6 +42,12 @@ ru:
       start: "Начать"
 
   admin:
+    gists:
+      index:
+        header: "Список созданных Gist пользователями"
+        question: "Вопрос"
+        gist_url: "Gist URL"
+        user: "Пользователь"
     tests:
       index:
         header: "Доступные тесты"
@@ -47,6 +56,7 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+        gists: "Gists пользователей"
 
       show:
         title: "Название"
@@ -78,3 +88,7 @@ ru:
   navigation:
     back: "Назад"
     confirm: "Вы уверены?"
+
+  services:
+    gist:
+      description: "Вопрос из теста %{title} от TestGuru"

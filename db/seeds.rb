@@ -1,14 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 derp, bob = User.create!(
-  [{ first_name: "Derp", last_name: "Bond", email: "derp@mail.com" },
-   { first_name: "Bob", last_name: "Farrell", email: "bob@mail.com" }]
+  [{ first_name: "Derp", last_name: "Bond", email: "derp@mail.com", password: "qwerty" },
+   { first_name: "Bob", last_name: "Farrell", email: "bob@mail.com", password: "qwerty" }]
 )
 
 backend, frontend = Category.create!(
@@ -41,4 +33,9 @@ answers = Answer.create!(
 results = TestPassage.create!(
   [{ user: derp, test: ruby },
    { user: derp, test: html }]
+)
+
+gists = Gist.create!(
+  [{ user: derp, question: questions[0], url: "derp_url"},
+   { user: bob, question: questions[1], url: "bob_url"}]
 )

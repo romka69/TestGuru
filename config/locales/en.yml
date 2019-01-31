@@ -4,6 +4,9 @@ en:
   test_passages:
     result:
       header: "The %{title} test was completed!"
+    gist:
+      success: "Gist saved!"
+      failure: "Gist not saved, error!"
 
   shared:
     errors:
@@ -37,6 +40,12 @@ en:
       start: "Start"
 
   admin:
+    gists:
+      index:
+        header: "List of Gists created by users"
+        question: "Question"
+        gist_url: "Gist URL"
+        user: "User"
     tests:
       index:
         header: "All tests"
@@ -45,6 +54,7 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        gists: "Gists users"
 
       show:
         title: "Title"
@@ -76,3 +86,7 @@ en:
   navigation:
     back: "Back"
     confirm: "You are sure?"
+
+  services:
+    gist:
+      description: "A question about %{title} from TestGuru"
