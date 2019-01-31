@@ -43,6 +43,7 @@ gem 'rails-i18n', '~> 5.1'
 # UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.2.1'
+gem 'octicons_helper'
 
 # NETWORKING
 gem 'octokit', '~> 4.0'
