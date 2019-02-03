@@ -81,6 +81,9 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
 
+      form_inline:
+        submit: "OK"
+
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест!"
