@@ -16,6 +16,9 @@ ru:
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
+    edit: "Редактировать"
+    cancel: "Отмена"
+
   helpers:
     submit:
       test:
