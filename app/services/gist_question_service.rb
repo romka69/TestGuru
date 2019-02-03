@@ -1,5 +1,7 @@
 class GistQuestionService
 
+  ResultObject = Struct.new(:success?, :gist)
+
   def initialize(question, client = default_client)
     @question = question
     @test = @question.test
@@ -7,11 +9,8 @@ class GistQuestionService
   end
 
   def call
-    @gist_answer = @client.create_gist(gist_params)
-  end
-
-  def success?
-    @gist_answer[:html_url].present?
+    gist_answer = @client.create_gist(gist_params)
+    ResultObject.new(gist_answer.html_url.present?, gist_answer)
   end
 
   private
