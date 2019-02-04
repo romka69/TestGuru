@@ -1,5 +1,5 @@
-let password;
-let password_confirm;
+var password;
+var password_confirm;
 
 document.addEventListener('turbolinks:load', function () {
   password = document.querySelector('.password_field');

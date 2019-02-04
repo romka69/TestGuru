@@ -16,6 +16,9 @@ ru:
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
+    edit: "Редактировать"
+    cancel: "Отмена"
+
   helpers:
     submit:
       test:
@@ -80,6 +83,9 @@ ru:
         show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
+
+      form_inline:
+        submit: "OK"
 
   tests_mailer:
     completed_test:
