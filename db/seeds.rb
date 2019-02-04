@@ -29,13 +29,3 @@ answers = Answer.create!(
    { body: "Correct answer to CSS", correct: true, question_id: questions[3].id },
    { body: "Incorrect answer to CSS", correct: false, question_id: questions[3].id }]
 )
-
-results = TestPassage.create!(
-  [{ user: derp, test: ruby },
-   { user: derp, test: html }]
-)
-
-gists = Gist.create!(
-  [{ user: derp, question: questions[0], url: "derp_url"},
-   { user: bob, question: questions[1], url: "bob_url"}]
-)
