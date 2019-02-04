@@ -1,16 +1,11 @@
-derp, bob = User.create!(
-  [{ first_name: "Derp", last_name: "Bond", email: "derp@mail.com", password: "qwerty" },
-   { first_name: "Bob", last_name: "Farrell", email: "bob@mail.com", password: "qwerty" }]
-)
-
 backend, frontend = Category.create!(
   [{ title: "Backend" }, { title: "Frontend" }]
 )
 
-ruby = Test.create!(title: "Ruby", level: 1, category_id: backend.id, author_id: bob.id)
-python = Test.create!(title: "Python", level: 2, category_id: backend.id, author_id: bob.id)
-html = Test.create!(title: "HTML", level: 0, category_id: frontend.id, author_id: bob.id)
-css = Test.create!(title: "CSS", level: 0, category_id: frontend.id, author_id: bob.id)
+ruby = Test.create!(title: "Ruby", level: 1, category_id: backend.id, author_id: User.first.id)
+python = Test.create!(title: "Python", level: 2, category_id: backend.id, author_id: User.first.id)
+html = Test.create!(title: "HTML", level: 0, category_id: frontend.id, author_id: User.first.id)
+css = Test.create!(title: "CSS", level: 0, category_id: frontend.id, author_id: User.first.id)
 
 questions = Question.create!(
   [{ body: "Which command can download the library?", test_id: ruby.id },
