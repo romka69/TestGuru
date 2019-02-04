@@ -64,7 +64,11 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "TestGuru_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
+<<<<<<< HEAD
   config.action_mailer.default_url_options = { host: 'peaceful-badlands-46834..herokuapp.com' }
+=======
+  config.action_mailer.default_url_options = { host: 'whispering-river-16116.herokuapp.com' }
+>>>>>>> lesson_16
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       adress: 'smtp.gmail.com',
