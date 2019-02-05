@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   has_many :gists, dependent: :destroy
 
+  has_many :feedbacks, dependent: :nullify
+
   def test_by_level(level)
     tests.where(level: level)
   end

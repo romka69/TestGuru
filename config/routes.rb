@@ -15,8 +15,9 @@ Rails.application.routes.draw do
       get :result
       post :gist
     end
-
   end
+
+  resources :feedbacks, only: %i[new create]
 
   namespace :admin do
     resources :gists, only: :index
