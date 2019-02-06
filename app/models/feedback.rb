@@ -1,6 +1,8 @@
-class Feedback < ApplicationRecord
+class Feedback
 
-  belongs_to :user
+  include ActiveModel::Model
+
+  attr_accessor :body
 
   validates :body, presence: true
 
