@@ -15,8 +15,8 @@
 
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
@@ -24,6 +24,15 @@ development:
   username: test_guru
   password: 'test_guru'
 
+test:
+  <<: *default
+  database: db/test_db
+  username: test_guru
+  password: 'test_guru'
+
+production:
+  <<: *default
+  database: test_guru_production
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -35,13 +44,3 @@ development:
 #production:
 #  <<: *default
 #  database: db/production.sqlite3
-
-test:
-  <<: *default
-  database: db/test_db
-  username: test_guru
-  password: 'test_guru'
-
-production:
-  <<: *default
-

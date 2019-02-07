@@ -94,6 +94,7 @@ ru:
   navigation:
     back: "Назад"
     confirm: "Вы уверены?"
+    feedback: "Обратная связь"
 
   services:
     gist:

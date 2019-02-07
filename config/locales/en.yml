@@ -92,6 +92,7 @@ en:
   navigation:
     back: "Back"
     confirm: "You are sure?"
+    feedback: "Send feedback"
 
   services:
     gist:

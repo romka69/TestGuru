@@ -1,0 +1,15 @@
+<div class="card border-primary">
+  <div class="card-body">
+    <%= form_with model: @feedback, local: true do |form| %>
+      <%= render 'shared/errors', resource: @feedback %>
+      <div class="form-group">
+
+        <p>
+          <%= form.text_area :body, class: 'form-control', rows: 3 %>
+        </p>
+
+        <%= form.submit class: 'btn btn-primary'%>
+      </div>
+      <% end %>
+  </div>
+</div>

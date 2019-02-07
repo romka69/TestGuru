@@ -8,8 +8,9 @@ document.addEventListener('turbolinks:load', function () {
   }
 
   var errors = document.querySelector('.resource-errors');
+  var testsIndex = document.querySelector('.table');
 
-  if (errors) {
+  if (errors && testsIndex) {
     var resourceId = errors.dataset.resourceId;
     formInlineHandler(resourceId);
   }
