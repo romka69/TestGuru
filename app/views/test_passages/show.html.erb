@@ -7,6 +7,13 @@
   <div class="progress-bar">&nbsp</div>
 <% end %>
 
+<% if @test_passage.test.timer_present? %>
+  <div>
+    <%= "Time left for test:" %>
+    <%= content_tag :span, '', class: 'timer', data: { timer: @test_passage.calc_time_left, id: @test_passage.id } %>
+  </div>
+<% end %>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>

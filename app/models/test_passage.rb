@@ -30,6 +30,20 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
+  def have_time?
+    if test.timer_not_nil_zero
+      calc_time_left.positive? ? true : false
+    else
+      true
+    end
+  end
+
+  def calc_time_left
+    if test.timer_not_nil_zero
+      (created_at + test.timer.minutes - Time.current).to_i
+    end
+  end
+
   private
 
   def before_validation_set_question
