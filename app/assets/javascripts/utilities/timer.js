@@ -10,7 +10,7 @@ document.addEventListener('turbolinks:load', function () {
           time_counter -= 1;
       } else {
         alert('Time is over');
-        document.location.replace('/test_passages/' + test_passage_id + '/result');
+        document.querySelector('form').submit();
       }
 
       var time_left = parseInt(time_counter / 60) + ':' + time_counter % 60;
