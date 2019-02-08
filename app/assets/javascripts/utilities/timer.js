@@ -2,19 +2,18 @@ document.addEventListener('turbolinks:load', function () {
   var timer = document.querySelector('.timer');
 
   if (timer) {
-    var time_counter = timer.dataset.timer;
-    var test_passage_id = timer.dataset.id;
+    var timeCounter = timer.dataset.timer;
 
     setInterval(function () {
-      if (time_counter > 0) {
-          time_counter -= 1;
+      if (timeCounter > 0) {
+          timeCounter -= 1;
       } else {
         alert('Time is over');
-        document.querySelector('form').submit();
+        document.getElementById('form_test_passages').submit();
       }
 
-      var time_left = parseInt(time_counter / 60) + ':' + time_counter % 60;
-      timer.innerHTML = time_left;
+      var timeLeft = parseInt(timeCounter / 60) + ':' + timeCounter % 60;
+      timer.innerHTML = timeLeft;
 
     }, 1000);
   }

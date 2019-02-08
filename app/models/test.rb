@@ -24,12 +24,4 @@ class Test < ApplicationRecord
     name_category(name).order(title: sort).pluck(:title)
   end
 
-  def timer_not_nil_zero
-    timer.present? && timer.positive?
-  end
-
-  def timer_present?
-    timer.present?
-  end
-
 end

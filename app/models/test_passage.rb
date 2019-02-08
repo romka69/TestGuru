@@ -31,17 +31,19 @@ class TestPassage < ApplicationRecord
   end
 
   def have_time?
-    if test.timer_not_nil_zero
-      calc_time_left.positive? ? true : false
+    if test.timer?
+      calc_time_left.positive?
     else
       true
     end
   end
 
   def calc_time_left
-    if test.timer_not_nil_zero
-      (created_at + test.timer.minutes - Time.current).to_i
-    end
+    (created_at + test.timer.minutes - Time.current).to_i
+  end
+
+  def test_over
+    self.current_question = nil
   end
 
   private
