@@ -1,18 +1,23 @@
 <div class="row justify-content-center mt-3">
-  <div class="col col-md-10">
+  <div class="col col-md-8">
     <h1><%= t('.header') %></h1>
 
-    <h2><%= t('.taken') %></h2>
+    <% if @user_badges.present? %>
 
-    <table class="table">
-      <%= render @user_badges %>
-    </table>
+      <h2><%= t('.taken') %></h2>
 
-    <h2><%= t('.no_taken') %></h2>
+      <table class="table">
+        <%= render @user_badges %>
+      </table>
+    <% end %>
 
-    <table class="table">
-      <%= render @badges %>
-    </table>
+    <% if @badges.present? %>
+      <h2><%= t('.no_taken') %></h2>
+
+      <table class="table">
+        <%= render @badges %>
+      </table>
+    <% end %>
 
     <%link_to t('navigation.back'), root_path, class: 'nav-link' %>
 
