@@ -13,9 +13,12 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
-
-    save!
+    if have_time?
+      self.correct_questions += 1 if correct_answer?(answer_ids)
+      save!
+    else
+      self.current_question = nil
+    end
   end
 
   def test_success_done?
@@ -28,6 +31,14 @@ class TestPassage < ApplicationRecord
 
   def current_question_index
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
+  end
+
+  def have_time?
+    !test.timer? || calc_time_left.positive?
+  end
+
+  def calc_time_left
+    (created_at + test.timer.minutes - Time.current).to_i
   end
 
   private

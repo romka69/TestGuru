@@ -1,15 +1,23 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1><%= t('.header') %></h1>
 
-<% if @test_passage.test_success_done? %>
-  <p class="test_success">
+<% unless @test_passage.have_time? %>
+
+  <h2><%= t('.time_pass') %></h2>
+
 <% else %>
-  <p class="test_fail">
+
+  <h2><%= t('.test_pass', title: @test_passage.test.title) %></h2>
+
+  <% if @test_passage.test_success_done? %>
+    <p class="test_success">
+  <% else %>
+    <p class="test_fail">
+  <% end %>
+
+  Test <%= test_done_message(@test_passage) %> with <%= @test_passage.success_progress.to_i %>%
+
+  </p>
+
 <% end %>
-
-Test <%= test_done_message(@test_passage) %> with <%= @test_passage.success_progress.to_i %>%
-
-</p>
-
-
 
 <%= link_to 'To tests', tests_path %>

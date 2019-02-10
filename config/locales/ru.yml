@@ -3,7 +3,9 @@ ru:
 
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Ваш результат"
+      test_pass: "Тест %{title} успешно завершен!"
+      time_pass: "Время на прохождения теста вышло"
     gist:
       success: "Gist успешно сохранен!"
       failure: "Gist не сохранен, ошибка!"
@@ -33,6 +35,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Минут на прохождения теста"
 
   tests:
     index:
