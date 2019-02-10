@@ -1,0 +1,37 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+
+    <h1><%= t('.header') %></h1>
+
+    <p>
+      <strong><%= t('.title') %>:</strong><br>
+      <%= @badge.title %>
+    </p>
+
+    <p>
+      <strong><%= t('.image') %>:</strong><br>
+      <%= image_tag(@badge.file, size: 128) %>
+    </p>
+
+    <p>
+      <strong><%= t('.file') %>:</strong><br>
+      <%= @badge.file %>
+    </p>
+
+    <p>
+      <strong><%= t('.rule') %>:</strong><br>
+      <%= @badge.rule %>
+    </p>
+
+    <div class="row">
+      <%= link_to t('.edit'), edit_admin_badge_path(@badge), class: 'nav-link' %>
+      <%= link_to t('.delete'),
+                  admin_badge_path(@badge),
+                  method: :delete,
+                  data: { confirm: t('navigation.confirm') },
+                  class: 'nav-link' %>
+      <%= link_to t('navigation.back'), admin_badges_path, class: 'nav-link' %>
+    </div>
+
+  </div>
+</div>

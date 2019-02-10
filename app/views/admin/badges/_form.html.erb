@@ -1,0 +1,24 @@
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+  <div class="form-group">
+
+    <p>
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :file %>
+      <%= form.text_field :file, class: 'form-control' %>
+    </p>
+
+    <p>
+      <%= form.label :rule %>
+      <%= form.select :rule, Badge::BADGE_RULES, class: 'from-control' %>
+    </p>
+
+    <p>
+      <%= form.submit class: 'btn btn-primary'%>
+    </p>
+  </div>
+<% end %>

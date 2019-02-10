@@ -6,6 +6,8 @@ Rails.application.routes.draw do
              path_names: { sign_in: :login, sign_out: :logout },
              controllers: { sessions: 'users/sessions' }
 
+  resources :badges, only: :index
+
   resources :tests, only: :index do
     post :start, on: :member
   end
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   resources :feedbacks, only: %i[new create]
 
   namespace :admin do
+    resources :badges
     resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member

@@ -1,0 +1,20 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-10">
+    <h1><%= t('.header') %></h1>
+
+    <h2><%= t('.taken') %></h2>
+
+    <table class="table">
+      <%= render @user_badges %>
+    </table>
+
+    <h2><%= t('.no_taken') %></h2>
+
+    <table class="table">
+      <%= render @badges %>
+    </table>
+
+    <%link_to t('navigation.back'), root_path, class: 'nav-link' %>
+
+  </div>
+</div>

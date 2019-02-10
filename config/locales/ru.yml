@@ -6,6 +6,7 @@ ru:
       header: "Ваш результат"
       test_pass: "Тест %{title} успешно завершен!"
       time_pass: "Время на прохождения теста вышло"
+
     gist:
       success: "Gist успешно сохранен!"
       failure: "Gist не сохранен, ошибка!"
@@ -27,6 +28,10 @@ ru:
         create: "Создать тест"
         update: "Обновить тест"
 
+      badge:
+        create: "Создать ачивку"
+        update: "Обновить ачивку"
+
     select:
       prompt: "Выбрать"
 
@@ -37,6 +42,11 @@ ru:
         category_id: "Категория"
         timer: "Минут на прохождения теста"
 
+      badge:
+        title: "Название"
+        file: "Картинка"
+        rule: "Правило"
+
   tests:
     index:
       header: "Доступные тесты"
@@ -44,6 +54,8 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       actions: "Действия"
+      badges: "Ачивки"
+
     test:
       start: "Начать"
 
@@ -54,6 +66,7 @@ ru:
         question: "Вопрос"
         gist_url: "Gist URL"
         user: "Пользователь"
+
     tests:
       index:
         header: "Доступные тесты"
@@ -63,6 +76,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         gists: "Gists пользователей"
+        badges: "Ачивки"
 
       show:
         title: "Название"
@@ -90,6 +104,40 @@ ru:
       form_inline:
         submit: "OK"
 
+    badges:
+      create:
+        success: "Ачивка создана"
+        fail: "Ошибка! Ачивка не создана"
+
+      update:
+        success: "Ачивка изменена"
+        fail: "Ошибка! Ачивка не изменена"
+
+      destroy:
+        success: "Ачивка удалена"
+
+      index:
+        header: "Ачивки"
+        create: "Создать ачивку"
+        title: "Название"
+        image: "Картинка"
+        rule: "Правило выдачи"
+        actions: "Действия"
+
+      badge:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+
+      show:
+        header: "Просмотр ачивки"
+        title: "Название"
+        image: "Картинка"
+        file: "Ссылка на картинку"
+        rule: "Правило присвоения"
+        edit: "Редактировать ачивку"
+        delete: "Удалить ачивку"
+
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест!"
@@ -102,3 +150,11 @@ ru:
   services:
     gist:
       description: "Вопрос из теста %{title} от TestGuru"
+
+  badges:
+    index:
+      header: "Ачивки"
+      taken: "Полученные ачивки"
+      no_taken: "Неполученные ачивки"
+
+  not_image: "Ссылка должна вести на картинку"
