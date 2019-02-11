@@ -8,7 +8,7 @@ class BadgeTestService
 
   def call
     Badge.all.select do |badge|
-      get_badge(badge.title) if send("check_#{badge.title}?", badge.rule)
+      get_badge(badge.rule) if send("check_#{badge.rule}?", badge.param)
     end
   end
 
@@ -27,9 +27,9 @@ class BadgeTestService
     @user.tests.distinct.where(level: level).count == Test.where(level: level).count
   end
 
-  def get_badge(title)
-    badge = Badge.find_by(title: title)
-    user_badge = @user.user_badges.create!(badge: badge)
+  def get_badge(rule)
+    badge = Badge.find_by(rule: rule)
+    user_badge = @user.user_badges.create(badge: badge)
     user_badge.save
   end
 

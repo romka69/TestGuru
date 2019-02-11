@@ -8,6 +8,11 @@ ru:
         title: "Title"
         category: "Category"
 
+      badge:
+        rule: "Rule"
+        file: "Link on image"
+        param: "Param"
+
     errors:
       messages:
         blank: "can't be blank"

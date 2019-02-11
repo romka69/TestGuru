@@ -3,8 +3,8 @@
   <div class="form-group">
 
     <p>
-      <%= form.label :title %><br>
-      <%= form.select :title, Badge::BADGE_TITLES, class: 'form-control' %>
+      <%= form.label :rule %><br>
+      <%= form.select :rule, Badge::BADGE_RULES, class: 'form-control' %>
     </p>
 
     <p>
@@ -13,8 +13,8 @@
     </p>
 
     <p>
-      <%= form.label :rule %><br>
-      <%= form.text_field :rule, class: 'from-control' %>
+      <%= form.label :param %><br>
+      <%= form.text_field :param, class: 'from-control' %>
     </p>
 
     <p>

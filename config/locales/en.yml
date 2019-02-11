@@ -41,9 +41,9 @@ en:
         timer: "Minutes to pass the test"
 
       badge:
-        title: "Title"
-        file: "Image"
         rule: "Rule"
+        file: "Image"
+        param: "Param"
 
   tests:
     index:
@@ -129,10 +129,10 @@ en:
 
       show:
         header: "Review badge"
-        title: "Title"
+        rule: "rule"
         image: "Image"
         file: "Link to image"
-        rule: "Rule"
+        param: "Param"
         edit: "Edit badge"
         delete: "Delete badge"
 
@@ -154,5 +154,3 @@ en:
       header: "Badges"
       taken: "Taken badges"
       no_taken: "Not taken badges"
-
-  not_image: "Need url with image format"
