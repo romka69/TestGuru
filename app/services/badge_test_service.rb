@@ -8,29 +8,33 @@ class BadgeTestService
 
   def call
     Badge.all.select do |badge|
-      get_badge(badge.rule) if send("check_#{badge.rule}?", badge.param)
+      send("check_#{badge.rule}?", badge.param)
+      #get_badge(badge) if send("check_#{badge.rule}?", badge.param)
     end
   end
 
   private
 
   def check_finish_tests_by_category?(category)
-    category_id = Category.find_by(title: category).id
-    @user.tests.distinct.where(category: category_id).count == Test.where(category_id: category_id).count
+    ids = Test.sort_name_category(category).ids
+    category == @test.category.title && param_ids_equally_tests_ids?(ids)
   end
 
   def check_first_try?(_params)
-    @user.tests.where(id: @test.id).count == 1
+    @user.test_passages.where(test: @test).count == 1
   end
 
   def check_finish_tests_by_level?(level)
-    @user.tests.distinct.where(level: level).count == Test.where(level: level).count
+    ids = Test.where(level: level).ids
+    level.to_i == @test.level && param_ids_equally_tests_ids?(ids)
   end
 
-  def get_badge(rule)
-    badge = Badge.find_by(rule: rule)
-    user_badge = @user.user_badges.create(badge: badge)
-    user_badge.save
+  def param_ids_equally_tests_ids?(ids)
+    ids.count == @user.test_passages.where(test_id: ids).success.uniq.count
   end
+
+  #def get_badge(badge)
+  #  @user.badges << badge
+  #end
 
 end

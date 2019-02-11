@@ -151,6 +151,9 @@ ru:
     gist:
       description: "Вопрос из теста %{title} от TestGuru"
 
+    badge:
+      success: "Получена ачивка"
+
   badges:
     index:
       header: "Ачивки"

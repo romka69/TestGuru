@@ -35,7 +35,12 @@ class TestPassagesController < ApplicationController
   end
 
   def get_badges(test_passage)
-    BadgeTestService.new(test_passage).call
+    badges = BadgeTestService.new(test_passage).call
+
+    unless badges.empty?
+      current_user.badges << badges
+      flash[:notice] = t('services.badge.success')
+    end
   end
 
   private

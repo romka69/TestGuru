@@ -18,10 +18,10 @@ class Test < ApplicationRecord
   scope :middle, -> { difficulty(2..4) }
   scope :hard, -> { difficulty(5..Float::INFINITY) }
 
-  scope :name_category, ->(name) { joins(:category).where(categories: { title: name }) }
+  scope :sort_name_category, ->(name) { joins(:category).where(categories: { title: name }).order(title: :desc) }
 
-  def self.sort_by_name_category(name, sort = :desc)
-    name_category(name).order(title: sort).pluck(:title)
+  def self.list_by_name_category(name)
+    sort_name_category(name).pluck(:title)
   end
 
 end

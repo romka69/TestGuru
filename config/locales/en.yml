@@ -149,6 +149,9 @@ en:
     gist:
       description: "A question about %{title} from TestGuru"
 
+    badge:
+      success: "Badge received"
+
   badges:
     index:
       header: "Badges"

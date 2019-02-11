@@ -6,7 +6,7 @@ class Badge < ApplicationRecord
   has_many :user_badges, dependent: :destroy
   has_many :users, through: :user_badges
 
-  validates :title, :file, :rule, presence: true
+  validates :rule, :file, :param, presence: true
   validates :file, format: IMG_FORMAT
 
 end
