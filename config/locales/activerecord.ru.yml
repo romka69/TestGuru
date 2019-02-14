@@ -8,6 +8,11 @@ ru:
         title: "Название"
         category: "Категория"
 
+      badge:
+        rule: "Правило"
+        file: "Ссылка на файл"
+        param: "Параметры"
+
     errors:
       messages:
         blank: "не может быть пустым"

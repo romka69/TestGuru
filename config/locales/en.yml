@@ -6,6 +6,7 @@ en:
       header: "Your results"
       time_pass: "Time has left"
       test_pass: "The %{title} test was completed!"
+
     gist:
       success: "Gist saved!"
       failure: "Gist not saved, error!"
@@ -25,6 +26,10 @@ en:
         create: "Create test"
         update: "Update test"
 
+      badge:
+        create: "Create badge"
+        update: "Update badge"
+
     select:
       prompt: "Select"
 
@@ -35,6 +40,11 @@ en:
         category_id: "Category"
         timer: "Minutes to pass the test"
 
+      badge:
+        rule: "Rule"
+        file: "Image"
+        param: "Param"
+
   tests:
     index:
       header: "All tests"
@@ -42,6 +52,8 @@ en:
       level: "Level"
       questions: "Questions"
       actions: "Actions"
+      badges: "Badges"
+
     test:
       start: "Start"
 
@@ -52,6 +64,7 @@ en:
         question: "Question"
         gist_url: "Gist URL"
         user: "User"
+
     tests:
       index:
         header: "All tests"
@@ -61,6 +74,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         gists: "Gists users"
+        badges: "Badges"
 
       show:
         title: "Title"
@@ -88,6 +102,40 @@ en:
       form_inline:
         submit: "OK"
 
+    badges:
+      create:
+        success: "Badge created"
+        fail: "Error! Badge not created"
+
+      update:
+        success: "Badge updated"
+        fail: "Error! Badge not updated"
+
+      destroy:
+        success: "Badge deleted"
+
+      index:
+        header: "Badges"
+        create: "Create badge"
+        title: "Title"
+        image: "Image"
+        rule: "Rule"
+        actions: "Actions"
+
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+
+      show:
+        header: "Review badge"
+        rule: "rule"
+        image: "Image"
+        file: "Link to image"
+        param: "Param"
+        edit: "Edit badge"
+        delete: "Delete badge"
+
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
@@ -100,3 +148,12 @@ en:
   services:
     gist:
       description: "A question about %{title} from TestGuru"
+
+    badge:
+      success: "Badge received"
+
+  badges:
+    index:
+      header: "Badges"
+      taken: "Taken badges"
+      no_taken: "Not taken badges"
