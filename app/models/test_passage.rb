@@ -7,7 +7,6 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question
-  before_validation :before_update_score, if: :completed?
 
   scope :success, -> { where('score >= ?', SUCCESS_SCORE) }
 
@@ -18,6 +17,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     if have_time?
       self.correct_questions += 1 if correct_answer?(answer_ids)
+      self.score = success_progress
       save!
     else
       self.current_question = nil
@@ -63,10 +63,6 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.true_answer
-  end
-
-  def before_update_score
-    self.score = success_progress
   end
 
 end
